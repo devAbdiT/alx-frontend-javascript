@@ -17,18 +17,15 @@ const teacher3: Teacher = {
 console.log(teacher3);
 
 // Interface definition
-interface printTeacher {
+interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Function implementation
-const printTeacher: printTeacher = (
+const printTeacher: printTeacherFunction = (
   firstName: string,
   lastName: string
 ): string => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-// Example usage
 console.log(printTeacher("John", "Doe")); // Output: J. Doe
-console.log(printTeacher("Jane", "Smith")); // Output: J. Smith
