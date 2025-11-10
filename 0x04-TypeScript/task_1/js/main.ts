@@ -1,3 +1,15 @@
+// Interface definition
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+export const printTeacher: printTeacherFunction = function (
+  firstName: string,
+  lastName: string
+): string {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -15,12 +27,3 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
-}
-
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
-
-console.log(printTeacher("John", "Doe")); // Output: J. Doe
