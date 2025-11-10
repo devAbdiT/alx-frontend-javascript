@@ -32,11 +32,8 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (
-  firstName: string,
-  lastName: string
-): string => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0].toUpperCase()}. ${lastName}`;
+}
 
 console.log(printTeacher("John", "Doe")); // Output: J. Doe
