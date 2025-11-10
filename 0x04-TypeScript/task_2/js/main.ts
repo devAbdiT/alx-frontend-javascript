@@ -70,13 +70,14 @@ function executeWork(employee: Director | Teacher): string {
   }
 }
 // String literal type for Subjects
+// String literal type for Subjects
 type Subjects = "Math" | "History";
 
 // teachClass function
 function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
-  } else if (todayClass === "History") {
+  } else {
     return "Teaching History";
   }
 }
