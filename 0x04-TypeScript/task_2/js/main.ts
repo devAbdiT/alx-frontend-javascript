@@ -57,7 +57,7 @@ console.log(createEmployee(1000)); // Director instance
 console.log(createEmployee("$500")); // Director instance
 
 // Type predicate function to check if employee is a Director
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
@@ -67,5 +67,16 @@ function executeWork(employee: Director | Teacher): string {
     return employee.workDirectorTasks();
   } else {
     return employee.workTeacherTasks();
+  }
+}
+// String literal type for Subjects
+type Subjects = "Math" | "History";
+
+// teachClass function
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
   }
 }
