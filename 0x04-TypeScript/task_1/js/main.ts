@@ -38,7 +38,8 @@ interface printTeacherFunction {
 }
 
 function printTeacher(firstName: string, lastName: string) {
-  return `${firstName[0].toUpperCase()}. ${lastName}`;
+  const fullName = `${firstName[0].toUpperCase()}. ${lastName}`;
+  return fullName;
 }
 
 const info = printTeacher("John", "Doe"); // Output: J. Doe
