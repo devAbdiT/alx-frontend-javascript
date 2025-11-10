@@ -1,3 +1,19 @@
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// function printTeacher(firstName: string, lastName: string): string {
+//   return `${firstName[0]}. ${lastName}`;
+// }
+
+// printTeacher("John", "Doe"); // Output: J. Doe
+const printTeacher: printTeacherFunction = (
+  firstName: string,
+  lastName: string
+): string => `${firstName[0]}. ${lastName}`;
+
+console.log(printTeacher("John", "Doe"));
+
 // interface Teacher {
 //   readonly firstName: string;
 //   readonly lastName: string;
@@ -18,10 +34,3 @@
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
-
-const printTeacher: printTeacherFunction = (
-  firstName: string,
-  lastName: string
-): string => `${firstName[0]}. ${lastName}`;
-
-console.log(printTeacher("John", "Doe"));
