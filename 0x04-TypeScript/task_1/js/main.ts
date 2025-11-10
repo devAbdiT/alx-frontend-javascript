@@ -37,11 +37,41 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// const printTeacher = (firstName: string, lastName: string): string => {
-//   return `${firstName.charAt(0)}. ${lastName}`;
-// };
 function printTeacher(firstName: string, lastName: string) {
   return `${firstName[0].toUpperCase()}. ${lastName}`;
 }
 
-console.log(printTeacher("John", "Doe")); // Output: J. Doe
+const info = printTeacher("John", "Doe"); // Output: J. Doe
+console.log(info);
+
+// Interface for the constructor
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass implements StudentClassInterface {
+  private firstName: string;
+  private lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+const student = new StudentClass("John", "Doe");
+console.log(student.displayName()); // Output: John
+console.log(student.workOnHomework()); // Output: Currently working
