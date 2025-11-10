@@ -40,7 +40,7 @@ interface printTeacherFunction {
 // const printTeacher = (firstName: string, lastName: string): string => {
 //   return `${firstName.charAt(0)}. ${lastName}`;
 // };
-function printTeacher(firstName: string, lastName: string): string {
+function printTeacher(firstName: string, lastName: string) {
   return `${firstName[0].toUpperCase()}. ${lastName}`;
 }
 
