@@ -1,17 +1,3 @@
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
-}
-
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0].toUpperCase()}. ${lastName}`;
-}
-// const printTeacher: printTeacherFunction = (
-//   firstName: string,
-//   lastName: string
-// ): string => `${firstName[0]}. ${lastName}`;
-
-console.log(printTeacher("John", "Doe"));
-
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -41,35 +27,3 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 console.log(director1);
-
-interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
-}
-
-// Interface for the class methods
-interface StudentClassInterface {
-  workOnHomework(): string;
-  displayName(): string;
-}
-
-class StudentClass implements StudentClassInterface {
-  private firstName: string;
-  private lastName: string;
-
-  constructor(firstName: string, lastName: string) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-
-  workOnHomework(): string {
-    return "Currently working";
-  }
-
-  displayName(): string {
-    return this.firstName;
-  }
-}
-
-const student = new StudentClass("John", "Doe");
-console.log(student.displayName()); // Output: John
-console.log(student.workOnHomework()); // Output: Currently working
