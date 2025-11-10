@@ -55,10 +55,3 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200)); // Teacher instance
 console.log(createEmployee(1000)); // Director instance
 console.log(createEmployee("$500")); // Director instance
-
-// Testing the methods
-const employee1 = createEmployee(450);
-console.log(employee1.workFromHome()); // "Cannot work from home"
-
-const employee2 = createEmployee(600);
-console.log(employee2.workFromHome()); // "Working from home"
