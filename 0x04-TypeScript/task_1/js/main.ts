@@ -6,7 +6,7 @@ function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
-console.log(printTeacher("John", "Doe")); // Output: J. Doe
+printTeacher("John", "Doe"); // Output: J. Doe
 
 // interface Teacher {
 //   readonly firstName: string;
