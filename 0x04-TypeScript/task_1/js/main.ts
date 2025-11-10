@@ -3,7 +3,7 @@ interface printTeacherFunction {
 }
 
 function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`;
+  return `${firstName[0].toUpperCase()}. ${lastName}`;
 }
 // const printTeacher: printTeacherFunction = (
 //   firstName: string,
@@ -28,9 +28,8 @@ const teacher3: Teacher = {
   contract: false,
 };
 
-// console.log(teacher3);
+console.log(teacher3);
 
-// Interface for the constructor
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
@@ -41,7 +40,6 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-// Class implementation
 class StudentClass implements StudentClassInterface {
   private firstName: string;
   private lastName: string;
@@ -60,7 +58,6 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage
 const student = new StudentClass("John", "Doe");
 console.log(student.displayName()); // Output: John
 console.log(student.workOnHomework()); // Output: Currently working
